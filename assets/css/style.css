@@ -487,10 +487,31 @@ template {
    overflow-y: scroll;
    letter-spacing: 0.1em;
  }
-
+h1{
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  font-size: 3.75rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2em;
+}
 a{
   text-decoration: none;
   color: #ffffff;
+}
+.btn{
+  border: 2px solid #ffffff;
+  min-width: 250px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  font-size: 1.125rem;
+  padding: 18px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.1em;
+  transition: background-color 0.5s;
+}
+.btn:hover{
+  background-color: #d66926;
 }
 
  .header{
@@ -540,15 +561,16 @@ a{
   margin: auto;
  }
 
- .header-logo{
+.header-logo{
   font-size: 1.5rem;
   letter-spacing: 0.22em;
- }
+}
 
- .header-logo__link{
-   display: block;
+.header-logo__link{
+  display: block;
   padding: 20px 20px 20px 0;
- }
+}
+
 
  .header-logo__accent{
     border: 3px solid #d63c29;
@@ -579,7 +601,11 @@ a{
    font-size: 1.125rem;
    padding: 20px;
    display: block;
+   transition: color 0.5s;
  }
+ .header-navbar__link:hover{
+  color: #d66926;
+  }
 
  .header-content{
   position: relative;
@@ -587,7 +613,15 @@ a{
 
  }
  .header-content__title{
-   margin: 0;
+   margin: 0 0 53px 0;
+   text-align: center;
+ }
+ .header-content__buttons{
+   display: flex;
+   justify-content: center;
+ }
+ .header-content__buttons .btn:first-of-type{
+    margin-right: 20px;
  }
 
 
