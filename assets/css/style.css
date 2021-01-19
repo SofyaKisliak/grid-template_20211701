@@ -726,7 +726,7 @@ img{
 opacity: 0.95 !important;
 }
  .skills-item:hover .skills-item__image{
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .skills-item:hover .skills-item__link{
   color: #d66926;
@@ -935,6 +935,7 @@ transform: scale(1.1);
   align-content: center;
   justify-content: center;
   background-color: #2d3651;
+  transition: transform 0.5s;
   
 }
 .post-item__image img{
@@ -962,5 +963,19 @@ transform: scale(1.1);
   margin-top: 16px;
   margin-bottom: 16px;
 }
+.post-item:hover .post-item__image{
+  transform: scale(1.1);
+}
+.post-item:hover {
+  background-color: #d8d8d8;    
+}
+
+.post-item:hover h3{
+  color: #2d3651;
+}
+.post-item:hover p{
+  color: #2d3651;
+}
+
 
 
