@@ -485,7 +485,7 @@ template {
    font-size: 16px;
    font-family: "Roboto", sans-serif;/*просмтреть шрифты*/
    overflow-y: scroll;
-   letter-spacing: 0.1em;
+   /*letter-spacing: 0.1em;*/
  }
 h1{
   font-family: "Roboto Slab", serif;
@@ -505,7 +505,10 @@ h2{
   margin-bottom: 56px;
 }
 h3{
-  color: #000000;
+  letter-spacing: 0.05em;
+  color:#637588;
+  font-size: 1.125em;
+  
 }
 
 a{
@@ -519,12 +522,12 @@ p{
   /*letter-spacing: 0.055em;*/
   line-height: 1.15em;
   color: #637588;
-  /*margin-bottom: 18px;
-  display: block;*/
+  /*margin-bottom: 18px;*/
 }
-/*:focus{
-  outline-style: none;
-}*/
+img{
+  border-style: none;
+}
+
 .btn{
   border: 2px solid #ffffff;
   min-width: 250px;
@@ -625,7 +628,8 @@ p{
 .header-menu__container,
 .header-content__container,
 .article__container,
-.form__container{
+.form__container,
+.post__container{
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1340px ;
@@ -799,11 +803,14 @@ transform: scale(1.1);
   letter-spacing: 0.1em;
   transition: color 0.5s;
 }
-.article{
+.article
+{
+  display: block;
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #e5e5e5;
   letter-spacing: 0.055em;
+  
 }
 .article__container{
   display: grid;
@@ -871,6 +878,89 @@ transform: scale(1.1);
   background-color: rgba(255, 255, 255, 0.15);
   outline: none;
   
+}
+.posts{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.post-container{
+ 
+}
+
+.post__grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+  overflow: hidden;
+  gap: 20px; 
+  padding-bottom: 20px;
+  margin-top: 0;
+
+}
+.post-item{
+  background-color: #f2f2f2;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.post-item:nth-of-type(1){
+  grid-area: a1;
+}
+.post-item:nth-of-type(2){
+  grid-area: a2;
+}
+.post-item:nth-of-type(3){
+  grid-area: a3;
+}
+.post-item:nth-of-type(4){
+  grid-area: a4;
+}
+.post-item:nth-of-type(5){
+  grid-area: a5;
+}
+.post-item:nth-of-type(6){
+  grid-area: a6;
+}
+
+.post-item__link{
+  display: grid;
+  overflow: hidden;
+  height: 100%;
+  grid-template-rows: 300px 1fr ;
+  
+}
+.post-item__image{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: #2d3651;
+  
+}
+.post-item__image img{
+  width: 100%;
+}
+
+.post-item__caption{
+  display: grid;
+  align-content: center;
+  padding: 20px;
+
+}
+.post-item__caption h3{
+  text-align: center;
+  font-family: "Roboto Slab" ,serif;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.post-item__caption p{
+  text-align: center;
+  line-height: 1.15;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: none;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 
