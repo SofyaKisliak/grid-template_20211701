@@ -527,6 +527,9 @@ p{
 img{
   border-style: none;
 }
+span{
+  color: #637588;
+}
 
 .btn{
   border: 2px solid #ffffff;
@@ -629,7 +632,8 @@ img{
 .header-content__container,
 .article__container,
 .form__container,
-.post__container{
+.post__container,
+.footer__container{
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1340px ;
@@ -976,6 +980,49 @@ opacity: 0.95 !important;
 .post-item:hover p{
   color: #2d3651;
 }
+.footer{
+  background-color: #2d3651;
+  text-align: center;
+  padding: 50px 20px 70px 20px;
+  display: block;
+}
+.footer__icons{
+  position: relative;
+  display: grid;
+  justify-content: center;
+grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+margin-bottom: 40px;
+}
+.footer__icons a{
+  padding: 10px;
+}
+.fab{
+  font-size: 36px;
+  
+
+}
+.footer__copyright span:nth-of-type(1){
+  font-weight: 100 ;
+  letter-spacing: 0.33em;
+  margin-right: -0.5em;
+}
+.footer__copyright span:nth-of-type(2){
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #e5e5e5;
+
+}
+.footer__icons::after{
+  position: absolute;
+  width: 75px;
+  height: 2px;
+  content: " ";
+  left: calc(50% - 75px/2);
+  bottom: -20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+ 
+
 
 
 
