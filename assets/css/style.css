@@ -582,7 +582,8 @@ img{
 }*/
 .input{
   margin: 0;
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
+  font-family: inherit;
   line-height: 1.15;
   overflow: visible;
 }
@@ -656,6 +657,8 @@ img{
  }
  .header-navbar{
    display: grid;
+   align-items: center;
+   letter-spacing: 0.1em;
    justify-items: end;
 
  }
@@ -867,7 +870,7 @@ opacity: 0.95 !important;
   letter-spacing: 0.15em;
   color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
   font-size: 1.125rem;
   transition: border-color 0.5s, background-color 0.5s;
@@ -886,9 +889,6 @@ opacity: 0.95 !important;
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.post-container{
- 
-}
 
 .post__grid{
   display: grid;
@@ -905,6 +905,7 @@ opacity: 0.95 !important;
   margin: 0;
   top: 0;
   left: 0;
+  transition: background-color 0.5s;
 }
 
 .post-item:nth-of-type(1){
@@ -939,10 +940,13 @@ opacity: 0.95 !important;
   justify-content: center;
   background-color: #2d3651;
   transition: transform 0.5s;
+  overflow: hidden;
   
 }
 .post-item__image img{
   width: 100%;
+  transition: transform 0.5s;
+  object-fit: cover;
 }
 
 .post-item__caption{
@@ -956,6 +960,7 @@ opacity: 0.95 !important;
   font-family: "Roboto Slab" ,serif;
   margin-top: 18px;
   margin-bottom: 18px;
+  transition: color 0.5s;
 }
 .post-item__caption p{
   text-align: center;
@@ -965,8 +970,9 @@ opacity: 0.95 !important;
   letter-spacing: none;
   margin-top: 16px;
   margin-bottom: 16px;
+  transition: color 0.5s;
 }
-.post-item:hover .post-item__image{
+.post-item:hover .post-item__image img{
   transform: scale(1.1);
 }
 .post-item:hover {
@@ -1022,6 +1028,19 @@ opacity: 0.95 !important;
   left: calc(50% - 75px/2);
   bottom: -20px;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width:992){
+
+}
+@media (max-width:768){
+
+}
+@media (max-width:576){
+
+}
+@media (max-width:992){
+
 }
  
 
