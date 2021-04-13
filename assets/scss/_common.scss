@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+  }
+  html{
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;/*просмтреть шрифты*/
+    overflow-y: scroll;
+    /*letter-spacing: 0.1em;*/
+  }
+ h1{
+   font-family: "Roboto Slab", serif;
+   font-weight: 300;
+   font-size: 3.75rem;
+   letter-spacing: 0.08em;
+   line-height: 1.2em;
+ }
+ h2{
+   font-family: "Roboto Slab", serif;
+   font-weight: 700;
+   font-size: 2.5rem;
+   letter-spacing: 0.1em;
+   line-height: 1.2em;
+   color: #2d3651;
+   margin-top: 0;
+   margin-bottom: 56px;
+ }
+ h3{
+   letter-spacing: 0.05em;
+   color:#637588;
+   font-size: 1.125em;
+   
+ }
+ 
+ a{
+   text-decoration: none;
+   color: #ffffff;
+ }
+ p{
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-size: 1.125rem;
+   /*letter-spacing: 0.055em;*/
+   line-height: 1.15em;
+   color: #637588;
+   /*margin-bottom: 18px;*/
+ }
+ img{
+   border-style: none;
+ }
+ 
+ 
+ .btn-accent,
+ .btn{
+   /*height: 60px;*/
+   display: block;
+   text-align: center;
+   font-size: 1.125rem;
+   /*padding: 18px 20px;*/
+   letter-spacing: 0.1em;
+   transition: background-color 0.5s;
+ }
+ .btn{
+   height: 60px;
+   padding: 18px 20px;
+   border: 2px solid #ffffff;
+   min-width: 250px;
+   background-color: rgba(255, 255, 255, 0.1);
+ }
+ 
+ .btn-accent{
+   height: 60px;
+   padding: 18px 20px;
+   border: 2px solid #2d3651;
+   min-width: 350px;
+   background-color: rgba(45, 54, 81, 0.8);
+ }
+ 
+ .btn:hover,
+ .btn:focus,
+ .btn-accent:hover
+ {
+   background-color: #d66926;
+ }
+       /*.hidden{
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+         border: 0;
+      }*/
+      .input{
+        margin: 0;
+        font-family: sans-serif;
+        /*font-family: inherit;*/
+        line-height: 1.15;
+        overflow: visible;
+      }
