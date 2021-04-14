@@ -17,12 +17,13 @@
 
 
 
-@import "sections/skills/skills.scss";
-@import "sections/skills/skills-item.scss";
+@import "sections/skills/skills";
+@import "sections/skills/skills-item";
 @import "sections/section-article";
-@import "sections/section-form";
-@import "sections/posts/post-item.scss";
-@import "sections/posts/post.scss";
+@import "sections/form/form";
+@import "sections/form/form-item";
+@import "sections/posts/post";
+@import "sections/posts/post-item";
 
 
 @import "footer";
@@ -34,7 +35,7 @@
       } 
       .btn{
         height: 50px;
-        padding: 14px -20px;
+        padding: 14px (-$gap);
         font-size: 1rem;
         min-width: 200px;
       }
@@ -88,7 +89,7 @@
       }
       .btn{
         height: 40px;
-        padding: 9px -20px;
+        padding: 9px (-$gap);
         font-size: 1rem;
         min-width: 170px;
       }
@@ -103,7 +104,7 @@
       .header-menu{
       
         background-color: rgba(68, 89, 110, 0.25);
-        box-shadow: -3px 3px 20px -10px black;
+        box-shadow: -3px 3px $gap -10px black;
       }
       
       
@@ -129,7 +130,7 @@
        height: 3px;
        opacity: 1;
        border-radius: 3px;
-       background: #ffffff;
+       background: $color-light;
        transition: 0.25s;
        transform: rotate(0deg);
       }
@@ -138,22 +139,22 @@
         display: none;
         /*position: absolute;
         top: 100%;
-        right: 20px;
+        right: $gap;
         display: none;
         margin: 0;
         padding: 0;
         list-style: none;
         text-align: right;
         background-color: rgba(68, 89, 110, 0.9);
-        box-shadow: -3px 3px 20px -10px black;*/
+        box-shadow: -3px 3px $gap -10px black;*/
       
       }
       
       .header-navbar__item{
-        margin-left: 20px;
+        margin-left: $gap;
       }
       .header-navbar__link{
-        padding: 20px 10px;
+        padding: $gap 10px;
       }
       .skills-item__title{
         font-size: 1.25rem;
@@ -165,7 +166,7 @@
       
       }
       .article__container{
-        gap: 20px;
+        gap: $gap;
         grid-template-columns: 1fr 236px;
       }
       .article__content p:first-of-type::after{

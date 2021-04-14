@@ -1,17 +1,19 @@
 .header-content{
     position: relative;
-   }
-  
-   .header-content__title{
-     margin: 0 0 53px 0;
-     text-align: center;
-   }
-  
-   .header-content__buttons{
-     display: flex;
-     justify-content: center;
-   }
-  
-   .header-content__buttons .btn:first-of-type{
-      margin-right: 20px;
+
+    &__title{
+      margin: 0 0 53px 0;
+      text-align: center;
+    }
+    &__buttons{
+      display: flex;
+      justify-content: center;
+    }
+    &__buttons .btn:first-of-type{
+      margin-right: $gap;
+    }
+    &__container{
+      @extend %container;
+    }
+
    }

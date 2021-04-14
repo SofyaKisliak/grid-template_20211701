@@ -3,14 +3,37 @@
     align-items: center;
     letter-spacing: 0.1em;
     justify-items: end;
- 
+
+    &__btn{
+      display: none; 
+    }
+    &__list{
+      width: 100%;
+      margin: 0 (-$gap) 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      justify-content: end;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    }
+    &__link{
+      font-size: 1.125rem;
+      padding: $gap;
+      display: block;
+      transition: color 0.5s;
+
+      &:hover{
+        color: $color-accent;
+      }
+    }
+  
   }
  /*--------------------------------------------------*/
  .header-navbar__btn {
    width: 30px;
    height: 22.5px;
    position: relative;
-   margin: 20px 0;
+   margin: $gap 0;
    transform: rotate(0deg);
    transition: .5s ease-in-out;
    cursor: pointer;
@@ -21,7 +44,7 @@
    position: absolute;
    height: 3px;
    width: 100%;
-   background: #ffffff;
+   background: $color-light;
    border-radius: 3px;
    opacity: 1;
    left: 0;
@@ -61,42 +84,13 @@
    left: 50%;
  }
  /*--------------------------------------------------*/
-  .header-navbar__btn{
-   display: none; 
-   /*position: relative;
-   width: 30px;
-   height: 23px;
-   margin: 20px 0;
-   cursor: pointer;
-   transition: 0.5s ease-in-out;
-   transform: rotate(0deg);*/
- }
- 
-  .header-navbar__list{
-   /* width: 100%;*/
-    margin: 0 -20px 0 0;
-    padding: 0;
-    list-style: none;
-    /*display: grid;
-    justify-content: end;
-    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));*/
-  }
+
   .header-navbar .active{
     display: block;
     position: absolute;
-    background-color: #44596e 0.9;
+    background-color: $color-gray-dark 0.9;
     top: 100%;
-    right: 20px * 2;
+    right: $gap * 2;
     text-align: end;
  
   }
- 
-  .header-navbar__link{
-    font-size: 1.125rem;
-    padding: 20px;
-    display: block;
-    transition: color 0.5s;
-  }
-  .header-navbar__link:hover{
-   color: #d66926;
-   }
