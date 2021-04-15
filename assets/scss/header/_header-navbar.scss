@@ -1,26 +1,154 @@
 .header-navbar{
     display: grid;
+    position: relative;
     align-items: center;
     letter-spacing: 0.1em;
-    justify-items: end;
+
+    @include md-min{
+       justify-items: center; 
+    }
+    @include md{
+        justify-content: end;
+    }
 
     &__btn{
-      display: none; 
+      width: 30px;
+      height: 22.5px;
+      position: relative;
+      margin: $gap 0;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      transition:max-height 0.4s linear;
+
+
+
+      @include md-min{
+          display: none; 
+      }
+      @include md{
+          //display: block;
+          //justify-content: end;
+          
+      }
+
+
+      &.active span{
+      &:nth-child(1) {
+          top: 9px;
+          width: 0%;
+          left: 50%;
+      }
+
+      &:nth-child(2) {
+          transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+          transform: rotate(-45deg);
+      }
+
+      &:nth-child(4) {
+          top: 9px;
+          width: 0%;
+          left: 50%;
+      }
     }
-    &__list{
+
+    &-row{
+      display: block;
+      position: absolute;
+      height: 3px;
       width: 100%;
-      margin: 0 (-$gap) 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      justify-content: end;
-      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      background: $color-light;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+          top: 0px;
+      }
+    
+      &:nth-child(2),
+      &:nth-child(3) {
+          top: 9px;
+      }
+    
+      &:nth-child(4) {
+          top: 18px;
+      }
+    
     }
+    }
+
+    &__list{
+      
+      @include unlist(0 (-$gap) 0 0);
+ 
+  
+      @include md-min{
+          width: 100%;
+          display: grid;
+          justify-content: end;
+          grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+          
+      }
+
+      @include md{
+          /*position: absolute;
+          top: 100%;
+          right: 20px;
+          display: none;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          text-align: right;
+          background-color: rgba($color-gray-dark, 0.9);*/
+          position: absolute;
+          top: 100%;
+          right: 20px;
+          text-align: end;
+          background-color: rgba($color-gray-dark, 0.9);
+
+
+      }
+
+
+     /* &.active{
+          display: block;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          text-align: end;
+          background-color: rgba($color-gray-dark, 0.9);
+  
+    }*/
+    }
+    &__item{
+        @include md-min{
+            margin-left: 20px;
+        }
+
+        @include md{
+            margin: $gap 10px;
+        }
+    }
+
     &__link{
       font-size: 1.125rem;
-      padding: $gap;
+      //padding: $gap;
       display: block;
       transition: color 0.5s;
+
+      @include md-min{
+          padding: $gap 10px;
+      }
+      @include md{
+          padding: 10px $gap;
+      }
+
 
       &:hover{
         color: $color-accent;
@@ -28,69 +156,4 @@
     }
   
   }
- /*--------------------------------------------------*/
- .header-navbar__btn {
-   width: 30px;
-   height: 22.5px;
-   position: relative;
-   margin: $gap 0;
-   transform: rotate(0deg);
-   transition: .5s ease-in-out;
-   cursor: pointer;
- }
- 
- .header-navbar__btn-row{
-   display: block;
-   position: absolute;
-   height: 3px;
-   width: 100%;
-   background: $color-light;
-   border-radius: 3px;
-   opacity: 1;
-   left: 0;
-   transform: rotate(0deg);
-   transition: .25s ease-in-out;
- }
- 
- .header-navbar__btn-row:nth-child(1) {
-   top: 0px;
- }
- 
- .header-navbar__btn-row:nth-child(2),#nav-icon3 span:nth-child(3) {
-   top: 9px;
- }
- 
- .header-navbar__btn-row:nth-child(4) {
-   top: 18px;
- }
- 
- .header-navbar__btn.activ span:nth-child(1) {
-   top: 9px;
-   width: 0%;
-   left: 50%;
- }
- 
- .header-navbar__btn.activ span:nth-child(2) {
-   transform: rotate(45deg);
- }
- 
- .header-navbar__btn.activ span:nth-child(3) {
-   transform: rotate(-45deg);
- }
- 
- .header-navbar__btn.activ span:nth-child(4) {
-   top: 9px;
-   width: 0%;
-   left: 50%;
- }
- /*--------------------------------------------------*/
 
-  .header-navbar .active{
-    display: block;
-    position: absolute;
-    background-color: $color-gray-dark 0.9;
-    top: 100%;
-    right: $gap * 2;
-    text-align: end;
- 
-  }

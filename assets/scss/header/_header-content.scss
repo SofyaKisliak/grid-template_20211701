@@ -2,16 +2,56 @@
     position: relative;
 
     &__title{
-      margin: 0 0 53px 0;
+      
       text-align: center;
+
+      @include lg-min{
+        margin: 0 0 53px 0;
+      }
+
+      @include lg-md{
+        margin: 0 0 43px;
+      }
+      @include md{
+        margin: 0 0 33px;
+      }
+
+
     }
     &__buttons{
       display: flex;
       justify-content: center;
+      .btn{
+        font-size: 1.125rem;
+
+        @include lg-md{
+          font-size: 1rem;
+        }
+        @include md{
+          font-size: 1rem;
+        }
+        @include sm{
+          letter-spacing: 0.05em;
+        }
+      }
+      
+
+      @include sm{
+        align-items: center;
+        flex-direction: column;
+      }
+
+     .btn:first-of-type{
+       @include sm-min{
+         margin-right: $gap;
+       }
+       @include sm{
+         margin-bottom: $gap ;
+       }
+        
     }
-    &__buttons .btn:first-of-type{
-      margin-right: $gap;
     }
+    
     &__container{
       @extend %container;
     }

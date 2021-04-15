@@ -7,22 +7,80 @@
     overflow-y: scroll;
     /*letter-spacing: 0.1em;*/
   }
+
+/*@mixin lg-min {
+  @media (min-width: $lg){
+    @content;
+
+  }
+}
+
+@mixin lg-md {
+  @media (max-width: $lg - 0.2) and (min-width: $md){
+    @content;
+ }
+}
+
+@mixin md {
+  @media (max-width: $md - 0.2){
+    @content;
+ }
+}*/
+
+
  h1{
    font-family: $font-header;
    font-weight: 300;
-   font-size: 3.75rem;
+   
    letter-spacing: 0.08em;
    line-height: 1.2em;
+
+   @include lg-min{
+    font-size: 3.75rem;
+
+   }
+
+   @include lg-md{
+    font-size: 2.5rem;
+   }
+
+   @include md{
+    font-size: 1.875rem;
+   }
+
+
+
+
  }
  h2{
    font-family: $font-header;
    font-weight: 700;
-   font-size: 2.5rem;
+   
    letter-spacing: 0.1em;
    line-height: 1.2em;
    color: $color-primary;
    margin-top: 0;
-   margin-bottom: 56px;
+   
+
+   @include lg-min{
+     margin-bottom: 56px;
+     font-size: 2.5rem;
+   }
+  
+  @include lg-md{
+     margin-bottom: 42px;
+     font-size: 2rem;
+  }
+  @include md-sm{
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+  }
+  @include sm{
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
  }
  h3{
    letter-spacing: 0.05em;
@@ -36,57 +94,80 @@
    color: $color-light;
  }
  p{
-   font-family: $font-main;
-   font-weight: 400;
-   font-size: 1.125rem;
-   /*letter-spacing: 0.055em;*/
-   line-height: 1.15em;
    color: $color-gray;
-   /*margin-bottom: 18px;*/
+ 
+   @include lg-min{
+     font-size: 1.125rem;
+   }
  }
  img{
    border-style: none;
  }
- 
- 
- .btn-accent,
- .btn{
-   /*height: 60px;*/
-   display: block;
-   text-align: center;
-   font-size: 1.125rem;
-   /*padding: 18px $gap;*/
-   letter-spacing: 0.1em;
-   transition: background-color 0.5s;
 
-   &:focus,
-   &:active,
-   &:hover{
-    background-color: $color-accent;
-   }
- }
  .btn{
-   height: 60px;
-   padding: 18px $gap;
+
    border: 2px solid $color-light;
-   min-width: 250px;
    background-color: rgba(255, 255, 255, 0.1);
+   @extend %btn-common;
+
+   @include lg-min{
+    height: 60px;
+    padding: 18px $gap;
+    font-size: 1rem;
+    min-width: 250px;
+   }
+
+   @include lg-md{
+    height: 50px;
+    padding: 14px $gap;
+    font-size: 1rem;
+    min-width: 200px;
+   }
+
+   @include md{
+    height: 40px;
+    padding: 9px $gap;
+    font-size: 1rem;
+    min-width: 170px;
+   }
+
+
+ }
+ .btn--primary{
+   @include lg-md{
+    min-width: 200px; 
+    height: 50px;
+    padding: 14px $gap;
+   }
+
+   @include md-sm{
+     min-width: 170px;
+     height: 40px;
+     letter-spacing: 0.05em;
+   }
  }
  
  .btn-accent{
+   @extend %btn-common;
+
    height: 60px;
    padding: 18px $gap;
    border: 2px solid $color-primary;
-   min-width: 350px;
+   
    background-color: rgba(45, 54, 81, 0.8);
+
+   @include sm-min{
+     min-width: 350px;
+   }
+
+   @include sm{
+     width: 100%;
+     
+   }
  }
+
+
  
-/* .btn:hover,
- .btn:focus,
- .btn-accent:hover
- {
-   background-color: $color-accent;
- }*/
        /*.hidden{
         position: absolute;
         overflow: hidden;
@@ -97,10 +178,10 @@
         padding: 0;
          border: 0;
       }*/
-      .input{
+      /*.input{
         margin: 0;
         font-family: $font-main;
         /*font-family: inherit;*/
-        line-height: 1.15;
-        overflow: visible;
-      }
+        //line-height: 1.15;
+       // overflow: visible;
+      //}*/
