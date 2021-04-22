@@ -12,6 +12,11 @@
     }
 
     &__btn{
+
+      @include md-min{
+          display: none; 
+      }
+
       width: 30px;
       height: 22.5px;
       position: relative;
@@ -21,19 +26,12 @@
       cursor: pointer;
       transition:max-height 0.4s linear;
 
-
-
-      @include md-min{
-          display: none; 
-      }
       @include md{
-          //display: block;
+          display: block;
           //justify-content: end;
           
       }
-
-
-      &.active span{
+     &.active span{
       &:nth-child(1) {
           top: 9px;
           width: 0%;
@@ -53,6 +51,8 @@
           width: 0%;
           left: 50%;
       }
+ 
+
     }
 
     &-row{
@@ -79,52 +79,43 @@
       &:nth-child(4) {
           top: 18px;
       }
+
+      
+
+
     
     }
     }
 
     &__list{
-      
-      @include unlist(0 (-$gap) 0 0);
- 
-  
-      @include md-min{
+        @include unlist(0 (-$gap) 0 0);
+        @include md-min{
           width: 100%;
           display: grid;
           justify-content: end;
           grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-          
-      }
+        }
 
+
+     
       @include md{
-          /*position: absolute;
-          top: 100%;
-          right: 20px;
-          display: none;
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          text-align: right;
-          background-color: rgba($color-gray-dark, 0.9);*/
-          position: absolute;
-          top: 100%;
-          right: 20px;
-          text-align: end;
-          background-color: rgba($color-gray-dark, 0.9);
 
-
+        display: none;
       }
+ 
 
-
-     /* &.active{
-          display: block;
+          &.active{
+            @include unlist(0 (-$gap) 0 0);
+              display: block;
           position: absolute;
           top: 100%;
-          right: 0;
-          text-align: end;
+          right: 20px;
+          text-align: right;
           background-color: rgba($color-gray-dark, 0.9);
+          }
+          
   
-    }*/
+    
     }
     &__item{
         @include md-min{

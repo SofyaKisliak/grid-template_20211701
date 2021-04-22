@@ -2,9 +2,11 @@
     box-sizing: border-box;
   }
   html{
+    
     font-size: $font-size;
     font-family: $font-main;
     overflow-y: scroll;
+    
     /*letter-spacing: 0.1em;*/
   }
 
@@ -165,7 +167,9 @@
      
    }
  }
-
+::placeholder{
+  color: white;
+}
 
  
        /*.hidden{
