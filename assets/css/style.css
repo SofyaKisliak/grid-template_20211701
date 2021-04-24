@@ -1442,7 +1442,7 @@ img {
   .form__container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .form-item__input:nth-of-type(1) {
+  .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
   .post__grid {
